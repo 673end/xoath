@@ -1,1 +1,214 @@
 电脑导航文件
+
+//下面的代码是attach.thml的原来文件，主要是附件列表页面
+	<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"> 
+   <title>Bootstrap 实例 - 标题</title>
+   <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-2 column">
+		</div>
+		<div class="col-md-6 column">
+		</div>
+		<div class="col-md-4 column">
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-8 column">
+					
+				<!--介绍内容-->
+
+<div class="row">
+   <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+         <img src="http://06.imgmini.eastday.com/mobile/20160728/20160728134210_bfaf12c7cafa8cf814339ef25b7d720c_7.jpeg" 
+         alt="通用的占位符缩略图">
+         <div class="caption">
+            <h3>中国象棋</h3>
+            <p>中国象棋，有点困难！</p>
+            <p>
+               <a href="../attach/chinesechess/index.html" class="btn btn-primary" role="button">
+                  进入
+               </a> 
+               <a href="#" class="btn btn-success btn-sm" role="button">
+                  收藏
+               </a>
+               <a href="#" class="btn btn-info btn-sm" role="button">
+                  评论
+               </a>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+         <img src="http://06.imgmini.eastday.com/mobile/20160728/20160728134210_bfaf12c7cafa8cf814339ef25b7d720c_7.jpeg" 
+         alt="通用的占位符缩略图">
+         <div class="caption">
+            <h3>鬼吃人</h3>
+            <p>像贪吃蛇一样的东西，能够吃人。跑。注意路线！</p>
+            <p>
+               <a href="../attach/snakeeatpeople/index.html" class="btn btn-primary btn-sm" role="button">
+                  进入
+               </a> 
+               <a href="#" class="btn btn-success btn-sm" role="button">
+                  收藏
+               </a>
+               <a href="#" class="btn btn-info btn-sm" role="button">
+                  评论
+               </a>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+         <img src="http://06.imgmini.eastday.com/mobile/20160728/20160728134210_bfaf12c7cafa8cf814339ef25b7d720c_7.jpeg" 
+         alt="通用的占位符缩略图">
+         <div class="caption">
+            <h3>烟花</h3>
+            <p>点击放烟花，无聊时点点。</p>
+            <p>
+               <a href="../attach/fireworks/index.html" class="btn btn-primary btn-sm" role="button">
+                  进入
+               </a> 
+               <a href="#" class="btn btn-success btn-sm" role="button">
+                  收藏
+               </a>
+               <a href="#" class="btn btn-info btn-sm" role="button">
+                  评论
+               </a>
+            </p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+         <img src="http://06.imgmini.eastday.com/mobile/20160728/20160728134210_bfaf12c7cafa8cf814339ef25b7d720c_7.jpeg" 
+         alt="通用的占位符缩略图">
+         <div class="caption">
+            <h3>3D旋转类型</h3>
+            <p>只是一个简单看看的代码，有兴趣的可以拿走</p>
+            <p>
+               <a href="../attach/threedrotation/index.html" class="btn btn-primary" role="button">
+                  进入
+               </a> 
+               <a href="#" class="btn btn-success btn-sm" role="button">
+                  收藏
+               </a>
+               <a href="#" class="btn btn-info btn-sm" role="button">
+                  评论
+               </a>
+            </p>
+         </div>
+      </div>
+   </div>
+   
+</div>
+				<!--介绍内容-->
+
+				</div>
+				<div class="col-md-4 column">
+						
+							<div class="panel-group" id="accordion">
+							   <div class="panel panel-default">
+							      <div class="panel-heading">
+							         <h4 class="panel-title">
+							            <a data-toggle="collapse" data-parent="#accordion" 
+							               href="#collapseOne">
+							               用一年的时间等你一句话
+							            </a>
+							         </h4>
+							      </div>
+							      <div id="collapseOne" class="panel-collapse collapse in">
+							         <div class="panel-body">
+							            用一年的时间等待你的一句话<br><br>
+							            我在这里一年了，只为守候你一句话。<br><br>
+							            我在这里又一年了，只为等你下句话。<br><br>
+							            我还会在这里一年，为你的再下句话。<br><br>
+							            那么我后在这里守候你几年呢！<br>
+							         </div>
+							      </div>
+							   </div>
+							   <div class="panel panel-success">
+							      <div class="panel-heading">
+							         <h4 class="panel-title">
+							            <a data-toggle="collapse" data-parent="#accordion" 
+							               href="#collapseTwo">
+							               关于
+							            </a>
+							         </h4>
+							      </div>
+							      <div id="collapseTwo" class="panel-collapse collapse">
+							         <div class="panel-body">
+							            本网站每年每个用户只能发布一次信息，发布之后不能更改。
+							         </div>
+							      </div>
+							   </div>
+							   <div class="panel panel-info">
+							      <div class="panel-heading">
+							         <h4 class="panel-title">
+							            <a data-toggle="collapse" data-parent="#accordion" 
+							               href="#collapseThree">
+							               天涯
+							            </a>
+							         </h4>
+							      </div>
+							      <div id="collapseThree" class="panel-collapse collapse">
+							         <div class="panel-body">
+							            发布之后可以再天涯小镇通过二维码，让天涯海角记住今年的一句话。
+							         </div>
+							      </div>
+							   </div>
+							   <div class="panel panel-warning">
+							      <div class="panel-heading">
+							         <h4 class="panel-title">
+							            <a data-toggle="collapse" data-parent="#accordion" 
+							               href="#collapseFour">
+							               欢迎骚扰
+							            </a>
+							         </h4>
+							      </div>
+							      <div id="collapseFour" class="panel-collapse collapse">
+							         <div class="panel-body">
+							            网站思路原创，代码来自互联网。目前有很多的尚未完善，如有问题请联系我们。
+							            您的骚扰是我们继续发展的动力。<br>
+							            电话：<br>
+							            微信公众平台：emprank<br>
+							            邮箱：673end@gmail.com
+							         </div>
+							      </div>
+							   </div>
+							</div>
+							<script type="text/javascript">
+							   $(function () { $('#collapseFour').collapse({
+							      toggle: false
+							   })});
+							   $(function () { $('#collapseTwo').collapse('show')});
+							   $(function () { $('#collapseThree').collapse('toggle')});
+							   $(function () { $('#collapseOne').collapse('hide')});
+							</script>  
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+//上面的代码是attach.thml的原来文件，主要是附件列表页面
