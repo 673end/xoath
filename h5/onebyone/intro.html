@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>AnnLetter介绍</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="msapplication-tap-highlight" content="no">
+
+<link href="http://121.42.26.173/style/nivo-slider.css" rel="stylesheet" type="text/css" />  
+<style type="text/css">
+body {background-color: #000;}
+.info-txt {color: #fff; font-family: Courier New; font-size: 13px; font-style: bold; line-height: 18px;}
+.loc {color: yellow;}
+.tel {color: orange;}
+#slider {width: 450px; height: 250px;}
+</style>
+<script type="text/javascript" src="http://121.42.26.173/js/jquery.js"></script>
+<script type="text/javascript" src="http://121.42.26.173/js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+function writeTxt()
+{
+	var charIndex = -1,
+	stringLength = 0,
+	inputText,
+	rowCur = 0,
+	txt = $("#infoTxt"),
+	writeTimer = null;
+	var textDec = '<h2>欢迎来到时笺网微信公众平台！</h2><br><br>时笺网为每位用户每年提供一次可以邮寄给未来5年或者16年后的信！<br>每年都可以在这里写下你所认为重要的任何事<br><br>待多个花开时节后，我们将你的心愿，祝福，誓言，重新整理，通过邮寄，让你用双手接到曾经的话。<br> <br>我们不仅仅是搬运工，我们更是你的祝愿者<br>那些多次注册，多次发布的人，都是流氓<br><br> 我们等你一句话，等你一年，然后用接下来的16年守候你这句话。<br><br>联系方式：<br>  网址 --- <a href="http://www.annletter.com"><em class="tel">annletter.com</em></a><br>  站长 --- <a href="tel:13274994828"><em class="tel">13274994828</em></a><br>　<form action="http://4.emprank.applinzi.com/user/register/doregister.html" method="post">Email:<input type="email" style="background:transparent;border:2px solid #ffffff" name="email" ><br>password:<input type="password" name="password" style="background:transparent;border:2px solid #ffffff" id="doc-ipt-pwd-1" placeholder="设置个密码"><br>repassword:<input type="password" style="background:transparent;border:2px solid #ffffff" name="repassword" placeholder="再输入一次" id="doc-ipt-pwd-1"><br>verify:<input type="text" name="verify" class="" id="doc-ipt-pwd-1" placeholder="请输入验证码"><br><button type="submit">提交</button></form>　<img src="http://4.emprank.applinzi.com/index.php?g=api&m=checkcode&a=index&length=4&font_size=14&width=100&height=34&charset=1234567890&use_noise=1&use_curve=0" class="am-img-responsive" alt=""/>　<br>';
+	function writeContent(init)
+	{
+		if(init)
+		{
+			inputText = textDec;
+		}
+		if(charIndex == -1)
+		{
+			charIndex = 0;
+			stringLength = inputText.length;
+		}
+		var initString = txt.html();
+		initString = initString.replace(/<span.*$/gi, '');
+		var theChar = inputText.charAt(charIndex);
+		if(theChar == '<')
+		{
+			var gt = inputText.substring(charIndex).indexOf('>');
+			if(gt != -1)
+			{
+				var theChar = inputText.substr(charIndex, gt + 1);
+				console.log(theChar);
+				charIndex+=gt;
+			}
+		}
+
+		initString = initString + theChar + "<span id='blink'>_</span>";
+		txt.html(initString);
+		charIndex = charIndex/1 +1;
+		if(charIndex%2==1)
+		{
+			document.getElementById('blink').style.display='none';
+		}
+		else
+		{
+			document.getElementById('blink').style.display='inline';
+		}
+
+		if(charIndex <= stringLength)
+		{
+			writeTimer = setTimeout(function(){writeContent(false)}, 100);
+		}
+		else
+		{
+			$("#blink").hide();
+			$("#slider").fadeIn(1000);
+		}
+	}
+
+	var currentStyle = 'inline';
+	function blinkSpan()
+	{
+		if(currentStyle == 'inline')
+		{
+			currentStyle='none';
+		}
+		else
+		{
+			currentStyle='inline';
+		}
+		$('#blink').style.display = currentStyle;
+		setTimeout('blinkSpan()', 500);
+	}
+	writeContent(true);
+}
+</script>
+</head>
+<body>
+<div id="infoTxt" class="info-txt"></div>
+<div id="slider" style="display: none"></div>
+<script type="text/javascript">
+var s = '';
+for(var i = 1; i <= 6; i++)
+{
+	s += '<img src="http://121.42.26.173/image/intro'+i+'.jpg" />';
+}
+
+$('#slider').html(s).nivoSlider({
+						effect: 'random',
+						pauseTime: 3000,
+						directionNav: false,
+						controlNav: false,
+						});
+writeTxt();
+</script>
+</body>
+</html>
+
